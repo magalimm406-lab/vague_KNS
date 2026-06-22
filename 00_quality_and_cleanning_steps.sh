@@ -4,13 +4,13 @@ RAW_DIR=/home/vanton/magali/vague_KNS/01_raw_data_KNS/
 
 cd /home/vanton/magali/vague_KNS
 
-mkdir –p 02_raw_data_quality
+mkdir -p 02_raw_data_quality
 RAW_QC_DIR=/home/vanton/magali/vague_KNS/02_raw_data_quality/
 
-mkdir –p 03_cleaned_data
+mkdir -p 03_cleaned_data
 CLEAN_DIR=/home/vanton/magali/vague_KNS/03_cleaned_data/
 
-mkdir –p 04_cleaned_data_quality
+mkdir -p 04_cleaned_data_quality
 
 ADAPTERFILE=/home/vanton/magali/vague_KNS/smallRNA_adapters.fa
 
