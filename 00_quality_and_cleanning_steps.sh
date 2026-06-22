@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-RAW_DIR=/home/vanton/magali/vague_magali/01_raw_data_KNS/
+RAW_DIR=/home/vanton/magali/vague_KNS/01_raw_data_KNS/
 
 cd /home/vanton/magali/vague_KNS
 
@@ -48,8 +48,8 @@ done
 
 ################################## 3. QC des données nettoyées
 
-CLEAN_DIR=/home/vanton/magali/vague_magali/03_cleaned_data
-CLEAN_QC_DIR=/home/vanton/magali/vague_magali/04_cleaned_data_quality
+CLEAN_DIR=/home/vanton/magali/vague_KNS/03_cleaned_data
+CLEAN_QC_DIR=/home/vanton/magali/vague_KNS/04_cleaned_data_quality
 
 mkdir -p "$CLEAN_QC_DIR"
 
@@ -60,7 +60,7 @@ fastqc -t "$THREADS" \
 multiqc "$CLEAN_QC_DIR" -o "$CLEAN_QC_DIR"
 
 ########### 
-cd /home/vanton/magali/vague_magali/04_cleaned_data_quality
+cd /home/vanton/magali/vague_KNS/04_cleaned_data_quality
 mkdir -p unpaired #il faut commencer par les unpaired
 mv *.unpaired* unpaired/
 cd unpaired
