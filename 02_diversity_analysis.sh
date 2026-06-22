@@ -18,9 +18,9 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
-export ROOTDIR="/nvme/bio/data_fungi/vague_project"
+export ROOTDIR="/home/vanton/magali/vague_KNS"
 export NTHREADS=16
-export QIIME2_ENV="qiime2-amplicon-2025.7"
+export QIIME2_ENV="bioinfo"
 export TMPDIR="${ROOTDIR}/tmp"
 export DBDIR="${ROOTDIR}/98_databasefiles"
 export QDIR="${ROOTDIR}/05_QIIME2"
