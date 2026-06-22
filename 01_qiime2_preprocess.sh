@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 # =============================================================================
 # SCRIPT 1/2 — Import QIIME2, Cutadapt, DADA2, courbes de raréfaction
-# Projet  : vague_project | 16S V4-V5 | Pointe de l'Artillerie
+# Projet  : vague_KNS | 16S V4-V5 | Mine Koniambo
 # Données : déjà nettoyées en amont, démarrage direct à QIIME2
-# Chemin  : /nvme/bio/data_fungi/vague_project
+# Chemin  : /nvme/bio/data_fungi/vague_KNS
 # Usage   : bash 01_qiime2_preprocess.sh
 # =============================================================================
 
 set -euo pipefail
 
-export ROOTDIR="/nvme/bio/data_fungi/vague_project"
+export ROOTDIR="/nvme/bio/data_fungi/vague_KNS"
 export NTHREADS=16
 export QIIME2_ENV="qiime2-amplicon-2025.7"
 export TMPDIR="${ROOTDIR}/tmp"
@@ -34,7 +34,7 @@ python3 << 'PYEOF'
 import os, re, csv
 from collections import Counter
 
-ROOTDIR = "/nvme/bio/data_fungi/vague_project"
+ROOTDIR = "/nvme/bio/data_fungi/vague_KNS"
 RAWDATA = os.path.join(ROOTDIR, "00_raw_data")
 DBDIR   = os.path.join(ROOTDIR, "98_databasefiles")
 manifest_path = os.path.join(DBDIR, "manifest")
