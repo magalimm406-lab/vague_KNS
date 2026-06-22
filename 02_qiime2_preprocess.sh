@@ -9,7 +9,7 @@
 
 set -euo pipefail
 
-export ROOTDIR="/nvme/bio/data_fungi/vague_KNS"
+export ROOTDIR="/home/vanton/magali/vague_KNS"
 export NTHREADS=16
 export QIIME2_ENV="qiime2-amplicon-2026.1"
 export TMPDIR="${ROOTDIR}/tmp"
