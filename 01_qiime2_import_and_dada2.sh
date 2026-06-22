@@ -13,7 +13,7 @@ conda activate qiime2-amplicon-2026.1
 ############################
 
 # Dossier racine du projet 
-PROJECT_DIR="/home/vanton/magali/vague_magali"
+PROJECT_DIR="/home/vanton/magali/vague_KNS"
 
 # Dossier contenant les fastq nettoyés (outputs de Trimmomatic)
 CLEAN_DIR="${PROJECT_DIR}/03_cleaned_data"
