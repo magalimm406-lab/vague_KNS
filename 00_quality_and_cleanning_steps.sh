@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-RAW_DIR=/home/vanton/magali/vague_magali/01_raw_data_sed/
+RAW_DIR=/home/vanton/magali/vague_magali/01_raw_data_KNS/
 
 cd /home/vanton/magali/vague_magali
 
