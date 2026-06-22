@@ -13,7 +13,7 @@ export ROOTDIR="/home/vanton/magali/vague_KNS"
 export NTHREADS=16
 export QIIME2_ENV="qiime2-amplicon-2026.1"
 export TMPDIR="${ROOTDIR}/tmp"
-export RAWDATA="${ROOTDIR}/00_raw_data"
+export RAWDATA="${ROOTDIR}/01_raw_data"
 export DBDIR="${ROOTDIR}/98_databasefiles"
 export QDIR="${ROOTDIR}/05_QIIME2"
 
