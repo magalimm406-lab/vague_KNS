@@ -35,7 +35,7 @@ import os, re, csv
 from collections import Counter
 
 ROOTDIR = "/nvme/bio/data_fungi/vague_KNS"
-RAWDATA = os.path.join(ROOTDIR, "00_raw_data")
+RAWDATA = os.path.join(ROOTDIR, "01_raw_data")
 DBDIR   = os.path.join(ROOTDIR, "98_databasefiles")
 manifest_path = os.path.join(DBDIR, "manifest")
 metadata_path = os.path.join(DBDIR, "sample-metadata.tsv")
