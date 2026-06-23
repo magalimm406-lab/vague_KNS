@@ -37,7 +37,7 @@ from collections import Counter
 ROOTDIR = "/home/vanton/magali/vague_KNS"
 RAWDATA = os.path.join(ROOTDIR, "01_raw_data_KNS")
 DBDIR   = os.path.join(ROOTDIR, "98_databasefiles")
-manifest_path = os.path.join(DBDIR, "manifest")
+manifest_path = os.path.join(DBDIR, "manifest_generated.tsv")
 metadata_path = os.path.join(DBDIR, "sample-metadata.tsv")
 
 samples = []
@@ -108,7 +108,7 @@ cd "${QDIR}/core"
 log "Import QIIME2"
 conda run -n "$QIIME2_ENV" qiime tools import \
   --type 'SampleData[PairedEndSequencesWithQuality]' \
-  --input-path "${DBDIR}/manifest" \
+  --input-path "${DBDIR}/manifest_generated.tsv" \
   --output-path "demux_paired.qza" \
   --input-format PairedEndFastqManifestPhred33V2
 
