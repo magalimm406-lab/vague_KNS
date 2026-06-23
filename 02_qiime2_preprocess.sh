@@ -13,7 +13,7 @@ export ROOTDIR="/home/vanton/magali/vague_KNS"
 export NTHREADS=16
 export QIIME2_ENV="qiime2-amplicon-2026.1"
 export TMPDIR="${ROOTDIR}/tmp"
-export RAWDATA="${ROOTDIR}/01_raw_data"
+export RAWDATA="${ROOTDIR}/01_raw_data_KNS"
 export DBDIR="${ROOTDIR}/98_databasefiles"
 export QDIR="${ROOTDIR}/05_QIIME2"
 
@@ -34,8 +34,8 @@ python3 << 'PYEOF'
 import os, re, csv
 from collections import Counter
 
-ROOTDIR = "/nvme/bio/data_fungi/vague_KNS"
-RAWDATA = os.path.join(ROOTDIR, "01_raw_data")
+ROOTDIR = "/home/vanton/magali/vague_KNS"
+RAWDATA = os.path.join(ROOTDIR, "01_raw_data_KNS")
 DBDIR   = os.path.join(ROOTDIR, "98_databasefiles")
 manifest_path = os.path.join(DBDIR, "manifest")
 metadata_path = os.path.join(DBDIR, "sample-metadata.tsv")
