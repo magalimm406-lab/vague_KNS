@@ -142,7 +142,8 @@ conda run -n "$QIIME2_ENV" qiime dada2 denoise-paired \
   --p-n-threads "$NTHREADS" \
   --o-table table.qza \
   --o-representative-sequences rep-seqs.qza \
-  --o-denoising-stats denoising-stats.qza
+  --o-denoising-stats denoising-stats.qza \
+  --o-base-transition-stats base-transition-stats.qza
 
 conda run -n "$QIIME2_ENV" qiime metadata tabulate \
   --m-input-file denoising-stats.qza \
