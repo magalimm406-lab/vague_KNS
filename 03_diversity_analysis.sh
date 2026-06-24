@@ -109,7 +109,7 @@ log "Classification taxonomique SILVA 138.2"
 
 cd "${DBDIR}"
 
-CLASSIFIER_SOURCE="/nvme/bio/data_fungi/valormicro_nc/98_databasefiles/silva-138.2-ssu-nr99-515f-926r-classifier.qza"
+CLASSIFIER_SOURCE="/home/vanton/magali/vague_KNS/98_databasefiles/silva-138.2-ssu-nr99-515f-926r-classifier.qza"
 CLASSIFIER="${DBDIR}/silva-138.2-ssu-nr99-515f-926r-classifier.qza"
 
 if [[ ! -f "$CLASSIFIER" ]]; then
