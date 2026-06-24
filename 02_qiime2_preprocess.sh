@@ -155,8 +155,10 @@ conda run -n "$QIIME2_ENV" qiime feature-table tabulate-seqs \
 
 conda run -n "$QIIME2_ENV" qiime feature-table summarize \
   --i-table table.qza \
-  --m-sample-metadata-file "${DBDIR}/sample-metadata.tsv" \
-  --o-visualization ../visual/table-summary.qzv
+  --m-metadata-file "${DBDIR}/sample-metadata.tsv" \
+  --o-feature-frequencies ../visual/feature-frequencies.qza \
+  --o-sample-frequencies ../visual/sample-frequencies.qza \
+  --o-summary ../visual/table-summary.qzv
 
 log "Arbre phylogénétique pour rarefaction Faith PD"
 conda run -n "$QIIME2_ENV" qiime phylogeny align-to-tree-mafft-fasttree \
