@@ -20,7 +20,7 @@ done
 
 export ROOTDIR="/home/vanton/magali/vague_KNS"
 export NTHREADS=16
-export QIIME2_ENV="bioinfo"
+export QIIME2_ENV="qiime2-amplicon-2026.1"
 export TMPDIR="${ROOTDIR}/tmp"
 export DBDIR="${ROOTDIR}/98_databasefiles"
 export QDIR="${ROOTDIR}/05_QIIME2"
@@ -109,12 +109,11 @@ log "Classification taxonomique SILVA 138.2"
 
 cd "${DBDIR}"
 
-CLASSIFIER_SOURCE="/home/vanton/magali/vague_KNS/98_databasefiles/silva-138.2-ssu-nr99-515f-926r-classifier.qza"
 CLASSIFIER="${DBDIR}/silva-138.2-ssu-nr99-515f-926r-classifier.qza"
 
 if [[ ! -f "$CLASSIFIER" ]]; then
-    log "Copie du classifier depuis valormicro_nc"
-    cp "$CLASSIFIER_SOURCE" "$CLASSIFIER" || { log "ERREUR: Classifier source introuvable ($CLASSIFIER_SOURCE)"; exit 1; }
+    log "ERREUR : classifier SILVA introuvable"
+    exit 1
 fi
 
 conda run -n "$QIIME2_ENV" qiime tools validate "$CLASSIFIER" || { log "ERREUR: Classifier invalide"; exit 1; }
@@ -152,8 +151,10 @@ conda run -n "$QIIME2_ENV" qiime feature-table rarefy \
 
 conda run -n "$QIIME2_ENV" qiime feature-table summarize \
     --i-table ../subtables/RarTable-decontam-depth${RAREFACTION_DEPTH}.qza \
-    --m-sample-metadata-file "${DBDIR}/sample-metadata.tsv" \
-    --o-visualization ../visual/table-rarefied-decontam-summary.qzv
+    --m-metadata-file "${DBDIR}/sample-metadata.tsv" \
+    --o-feature-frequencies ../visual/XXX-feature-frequencies.qza \
+    --o-sample-frequencies ../visual/XXX-sample-frequencies.qza \
+    --o-summary ../visual/XXX.qzv
 
 # =============================================================================
 # ÉTAPE 09 — ARBRE PHYLOGÉNÉTIQUE
